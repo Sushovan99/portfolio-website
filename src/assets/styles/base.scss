@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200;1,300&display=swap");
+
 *,
 *::after,
 *::before {
@@ -6,7 +8,45 @@
   box-sizing: border-box;
 }
 
+html,
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
   background-color: aquamarine;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  background-color: yellow;
+  font-size: 64px;
+}
+
+// font: inerhit -> Inherit current parents font properties
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+// overflow-wrap: break-word -> Stop over-flow of words if there isn't enough space.
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  overflow-wrap: break-word;
+}
+
+// max-width: 100% -> These elements will not take space more than this.
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
 }

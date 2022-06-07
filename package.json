@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Sushovan99/portfolio-website#readme",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.6.0",
     "@parcel/transformer-sass": "^2.6.0",
+    "@parcel/transformer-webmanifest": "^2.6.0",
     "parcel": "^2.6.0"
   }
 }
