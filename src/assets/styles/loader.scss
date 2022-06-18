@@ -41,7 +41,7 @@
     border-radius: 4px;
 
     &--inner {
-      width: 50%;
+      width: 0%;
       height: 100%;
       border-radius: 4px;
       background-color: $green-color;
@@ -64,15 +64,14 @@
     }
 
     // Styles for horizontal line
-    &::after {
-      content: "";
+    &--border {
+      width: 85%;
+      height: 0.7px;
+      background-color: $dark-green-color;
       position: absolute;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 85%;
-      height: 0.7px;
-      background-color: $dark-green-color;
     }
 
     // Styles for pulse dot
@@ -119,6 +118,19 @@
 
     &--changing-number {
       color: $green-color;
+    }
+  }
+  &__width--animation {
+    // We use "forwards" to keep it in the final form
+    animation: width__animation 1s ease forwards;
+    @keyframes width__animation {
+      from {
+        width: 85%;
+      }
+
+      to {
+        width: 28rem;
+      }
     }
   }
 }
