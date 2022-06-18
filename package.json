@@ -2,7 +2,6 @@
   "name": "portfolio-website",
   "version": "1.0.0",
   "description": "Create a beautiful portfolio website",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html --open",
     "build": "parcel build src/index.html"
@@ -22,5 +21,8 @@
     "@parcel/transformer-sass": "^2.6.0",
     "@parcel/transformer-webmanifest": "^2.6.0",
     "parcel": "^2.6.0"
+  },
+  "dependencies": {
+    "gsap": "^3.10.4"
   }
 }
