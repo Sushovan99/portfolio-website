@@ -1,0 +1,124 @@
+@import "./variables.scss";
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 99;
+  background-color: #0b134f;
+  display: grid;
+  place-items: center;
+  font-family: "Orbitron", sans-serif;
+
+  &__box {
+    width: 50rem;
+    height: 20rem;
+    position: relative;
+    border: 3px solid $green-color;
+    border-top: 3px solid $dark-green-color;
+    border-bottom: 3px solid $dark-green-color;
+    border-radius: 4px;
+
+    @media (max-width: 600px) {
+      & {
+        width: 90vw;
+      }
+    }
+  }
+
+  &__bar {
+    width: 90%;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #ccc;
+    transform: translateX(-50%);
+    border-radius: 4px;
+
+    &--inner {
+      width: 50%;
+      height: 100%;
+      border-radius: 4px;
+      background-color: $green-color;
+    }
+  }
+
+  &__text {
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+
+    @media (max-width: 350px) {
+      & {
+        font-size: 1.7rem;
+      }
+    }
+
+    // Styles for horizontal line
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 85%;
+      height: 0.7px;
+      background-color: $dark-green-color;
+    }
+
+    // Styles for pulse dot
+    &--dot {
+      position: relative;
+      &::after {
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        display: inline-block;
+        animation: pulse 1.2s infinite;
+        margin: 0 2px;
+        @keyframes pulse {
+          from {
+            opacity: 0;
+            background-color: #fff;
+          }
+          to {
+            opacity: 1;
+            background-color: $green-color;
+          }
+        }
+      }
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.8rem;
+
+    &--changing-number {
+      color: $green-color;
+    }
+  }
+}
